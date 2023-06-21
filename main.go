@@ -11,15 +11,23 @@ import (
 )
 
 const (
-	gitChangesFileName = "git_changes.txt"
-	logFileName        = "log_file.txt"
-	componentsFileName = "component_list.txt"
-	mappingsFileName   = "gtcModToCompMap.json"
+	//gitChangesFileName = "git_changes.txt"
+	//mappingsFileName   = "gtcModToCompMap.json"
+	logFileName        = "git-terra-changes.log"
+	componentsFileName = "git-terra-changes-components.txt"
 	liveComponentsPath = "infrastructure/live"
 	modulesPath        = "infrastructure/modules"
 )
 
 func main() {
+	if len(os.Args) < 3 {
+		fmt.Println("Usage: ./git-terra-changes <git_changes_file.txt> <mappings_file.json>")
+		os.Exit(1)
+	}
+
+	gitChangesFileName := os.Args[1]
+	mappingsFileName := os.Args[2]
+
 	mappings, mappingsErr := readJSONFile(mappingsFileName)
 	if mappingsErr != nil {
 		log.SetPrefix("[ERROR] ")

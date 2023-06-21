@@ -1,0 +1,6 @@
+{
+	"api-gateway-domain-name": "api-gateway-cuustom-domains",
+	"cognito": "cognito",
+	"eventbridge": "eventbridge",
+	"frontend": "frontend"
+}

@@ -1,0 +1,9 @@
+infrastructure/live/_env/sqs
+infrastructure/live/dev/eu-west-1/sqs
+infrastructure/live/prod/eu-west-1/sqs
+infrastructure/live/qa/eu-west-1/sqs
+infrastructure/live/sandbox/eu-west-1/sqs
+infrastructure/live/staging/eu-west-1/sqs
+infrastructure/live/uat/eu-west-1/sqs
+infrastructure/modules/aws-budgets
+pipelines/templates

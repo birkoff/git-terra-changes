@@ -48,12 +48,10 @@ func main() {
 	}
 	defer gitChangesFile.Close()
 
-	// Create a scanner to read the file line by line
 	scanner := bufio.NewScanner(gitChangesFile)
 
 	components := []string{}
 
-	// Iterate over each line and print it
 	for scanner.Scan() {
 		line := scanner.Text()
 		log.Println("===> Reading file line: ", line)

@@ -15,7 +15,8 @@ modulesPath        = "infrastructure/modules"
 ```
  
 ### git_changes_file.txt
-Based on https://terragrunt.gruntwork.io/docs/features/keep-your-terragrunt-architecture-dry/
+Kind of Based on https://terragrunt.gruntwork.io/docs/features/keep-your-terragrunt-architecture-dry/
+You actually need 2 dirs to state the live dir path
 ```
 infrastructure/live/_env/sqs
 infrastructure/live/dev/eu-west-1/sqs

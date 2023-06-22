@@ -6,11 +6,13 @@ Generate a list of Terraform &amp; Terragrunt Components to apply based on git p
 >$./git-terra-changes <git_changes_file.txt> <mappings_file.json>
 ```
 
+### Constants
+```
 logFileName        = "git-terra-changes.log"
 componentsFileName = "git-terra-changes-components.txt"
 liveComponentsPath = "infrastructure/live"
 modulesPath        = "infrastructure/modules"
-
+```
  
 ### git_changes_file.txt
 Based on https://terragrunt.gruntwork.io/docs/features/keep-your-terragrunt-architecture-dry/

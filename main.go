@@ -73,6 +73,10 @@ func main() {
 	}
 
 	// Write the components to a file
+	writeToFile(components)
+}
+
+func writeToFile(components []string) {
 	log.Println("Writing the list of components to a file...")
 
 	f, err := os.Create(componentsFileName)
@@ -81,6 +85,13 @@ func main() {
 		log.Fatal(err)
 	}
 	defer f.Close()
+
+	if len(components) == 0 {
+		log.SetPrefix("[WARNING] ")
+		log.Println("No components found. Creating empty file.")
+		fmt.Fprintln(f, "")
+		return
+	}
 
 	log.Println("List of components: ")
 	for _, component := range components {
